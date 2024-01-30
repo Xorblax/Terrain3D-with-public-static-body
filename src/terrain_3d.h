@@ -63,7 +63,6 @@ private:
 	real_t _cull_margin = 0.0;
 
 	// Physics body and settings
-	RID _static_body;
 	StaticBody3D *_debug_static_body = nullptr;
 	bool _collision_enabled = true;
 	bool _show_debug_collision = false;
@@ -95,6 +94,9 @@ public:
 
 	Terrain3D();
 	~Terrain3D();
+
+	// Physics body and settings
+	RID _static_body;
 
 	// Terrain settings
 	String get_version() const { return _version; }
